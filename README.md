@@ -11,11 +11,12 @@
 
 ### ALGOS - EST TIME: < 1hr
 
-- Work through the [Intro To Sorting Module](https://my.generalassemb.ly/activities/818)
+- Work through the [Basic Sorting Algorithms Module](https://my.generalassemb.ly/activities/778)
 
 ### Read/Watch The Following - EST TIME: < 1hr
 
-- [Implement 5 Sorting Algorithms using JavaScript](https://rajat-m.medium.com/implement-5-sorting-algorithms-using-javascript-63c5a917e811)
+- [Recursion is not hard: a step-by-step walkthrough of this useful programming technique](https://medium.com/free-code-camp/recursion-is-not-hard-858a48830d83)
+- **Note**: The above article is 1 of 6 written by a previous GA grad who wanted to learn more about algorithms and data structures. 
 
 
 
