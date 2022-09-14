@@ -5,7 +5,7 @@
 
 ### React-Giphy - EST TIME: 1-3+hr
 
-- [React ATM](https://git.generalassemb.ly/seirfx-cosmos/hw19-react-giphy/tree/main/giphy.md)
+- [React Giphy](https://git.generalassemb.ly/seirfx-cosmos/hw19-react-giphy/tree/main/giphy.md)
 
 ## Non-Deliverables
 
