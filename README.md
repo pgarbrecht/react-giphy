@@ -11,7 +11,12 @@
 
 ### ALGOS - EST TIME: < 1hr
 
-- Work through the [Basic Sorting Algorithms Module](https://my.generalassemb.ly/activities/778)
+Sign into https://my.generalassemb.ly
+
+and navigate to the Algorithms under the Computer Science topic.
+
+Work through the Basic Sorting Algorithms Module
+
 
 ### Read/Watch The Following - EST TIME: < 1hr
 
