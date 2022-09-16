@@ -1,24 +1,57 @@
 import './App.css';
 import React, { Component } from 'react' //import react from index.js
-import Gif from './Gif' //import child component
+import Gif from './Gif' //import child component -- Gif
 
-class App extends Component {
+class App extends Component { //create an App component under index.js
   constructor(props) {
     super(props)
-    this.state = {
-      baseURL: '',
-      apiKey: `apikey=${process.env.REACT_APP_API_KEY}`,
-      query: '&t=',
+    this.state = { //things that change in our app -- gif search terms and URL result
+      baseURL: 'https://api.giphy.com/v1/gifs/search?',
+      apiKey: `api_key=${process.env.REACT_APP_API_KEY}`,
+      query: '&q=',
       gifName: '',
       searchURL: ''
     }
   }
+
+  handleChange = (event) => { //this function is for recognizing gif name text in form
+    this.setState({ 
+      [event.target.id]: event.target.value 
+    })
+  }
+
+  handleSubmit = (event) => { //this function is for creating a new search URL that serves the gif they requested 
+    event.preventDefault();
+    this.setState({
+      searchURL: this.state.baseURL + this.state.apiKey + this.state.query + this.state.gifName
+    }, () => {
+      fetch(this.state.searchURL)
+      .then(response => { return response.json() })
+      .then(json => this.setState({
+        gif: json, 
+        gifName: ''
+      }),  (err) => console.log(err))
+    })
+  }
+
   render() {
+  console.log(this.state.searchURL)
   return (
     <div>
-        <p>
-          This will be the app
-        </p>
+        <form onSubmit={this.handleSubmit} >
+          <label>Gif</label>
+          <input
+          id="gifName"
+          type="text"
+          placeholder="Enter text to search for a gif"
+          value={this.state.gifName}
+          onChange={this.handleChange}
+          />
+          <input 
+          type="submit"
+          value="Find gif"
+          />  
+        </form>
         <Gif />
     </div>
   );

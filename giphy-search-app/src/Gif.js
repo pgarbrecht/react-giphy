@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react' //import parent component -- App
 
 class Gif extends Component {
     render() {
