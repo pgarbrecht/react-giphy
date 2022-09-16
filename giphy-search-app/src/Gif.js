@@ -2,13 +2,16 @@ import React, { Component } from 'react' //import parent component -- App
 
 class Gif extends Component {
     render() {
-        console.log(this.props.gif.data[0].images.original.url)
-      return (
-        <div>
-          <p>Your gifs</p>
-          <img src={this.props.gif.data[0].images.original.url} />
-        </div>
-      )
+        return(
+            <>
+                <p>Your gifs are below</p>
+                {this.props.gif.data.map((gif) => {
+                    return (
+                        <img src={gif.images.original.url} />
+                    )
+                })}
+            </>
+        )
     }
 }
 
