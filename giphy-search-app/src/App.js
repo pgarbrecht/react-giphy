@@ -10,6 +10,7 @@ class App extends Component { //create an App component under index.js
       apiKey: `api_key=${process.env.REACT_APP_API_KEY}`,
       query: '&q=',
       gifName: '',
+      limit: '&limit=10',
       searchURL: ''
     }
   }
@@ -23,7 +24,7 @@ class App extends Component { //create an App component under index.js
   handleSubmit = (event) => { //this function is for creating a new search URL that serves the gif they requested 
     event.preventDefault();
     this.setState({
-      searchURL: this.state.baseURL + this.state.apiKey + this.state.query + this.state.gifName
+      searchURL: this.state.baseURL + this.state.apiKey + this.state.query + this.state.gifName + this.state.limit
     }, () => {
       fetch(this.state.searchURL)
       .then(response => { return response.json() })
