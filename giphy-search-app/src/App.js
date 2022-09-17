@@ -37,9 +37,11 @@ class App extends Component { //create an App component under index.js
 
   render() {
   return (
-    <div>
+    
+    <div className="app-container">
+        <h1>Welcome to Giphy Search!</h1>
         <form onSubmit={this.handleSubmit} >
-          <label>Gif</label>
+          <label>Gif:</label>
           <input
           id="gifName"
           type="text"
@@ -48,6 +50,7 @@ class App extends Component { //create an App component under index.js
           onChange={this.handleChange}
           />
           <input 
+          className="button"
           type="submit"
           value="Find gif"
           />  
